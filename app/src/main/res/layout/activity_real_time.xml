@@ -1,12 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?><!--实时榜-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.appdemo.hractivity.rank.RealTimeActivity">
+    android:background="#E6E7E8"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <com.appdemo.widget.MyTopbarView
+        android:id="@+id/top_bar_view"
+        style="@style/fill_wrap" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimen_10_dip"
+        android:layout_marginLeft="@dimen/dimen_10_dip"
+        android:layout_marginRight="@dimen/dimen_10_dip">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_30_dip"
+            android:background="@drawable/real_time_bg">
+
+            <ListView
+                android:id="@+id/real_time_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_70_dip"
+                android:divider="@null"
+                android:scrollbars="none" />
+
+            <Button
+                android:id="@+id/scan_paihangbang_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_40_dip"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/dimen_15_dip"
+                android:background="@drawable/button_bg_real_time"
+                android:paddingBottom="@dimen/dimen_5_dip"
+                android:paddingLeft="@dimen/dimen_20_dip"
+                android:paddingRight="@dimen/dimen_20_dip"
+                android:paddingTop="@dimen/dimen_5_dip"
+                android:text="查看我的排行榜"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="@dimen/dimen_190_dip"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dimen_50_dip"
+            android:layout_marginTop="@dimen/dimen_15_dip"
+            android:background="@drawable/real_time_bg_red" />
+        <RelativeLayout
+            android:id="@+id/re"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="@dimen/dimen_200_dip"
+                android:layout_height="@dimen/dimen_200_dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/noorder"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无成交的订单,大家继续努力!"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_5_dip"
+                android:layout_below="@+id/iv"/>
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</LinearLayout>

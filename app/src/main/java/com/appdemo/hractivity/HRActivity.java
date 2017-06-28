@@ -260,8 +260,6 @@ public class HRActivity extends HouseResourceBaseActivity implements View.OnClic
         }
     }
 
-
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){

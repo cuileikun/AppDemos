@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/fill_wrap"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/dimen_40_dip"
+		android:background="#426EC4"
+		android:paddingLeft="@dimen/dimen_10_dip"
+		android:paddingRight="@dimen/dimen_10_dip">
+
+		<RelativeLayout
+			android:id="@+id/top_bar_left_rl"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent">
+
+			<ImageView
+				android:id="@+id/top_bar_left_img_iv"
+				android:layout_width="@dimen/dimen_24_dip"
+				android:layout_height="@dimen/dimen_24_dip"
+				android:layout_centerVertical="true"
+				android:scaleType="centerCrop"
+				android:src="@drawable/new_back" />
+
+			<TextView
+				android:id="@+id/top_bar_left_title_tv"
+				style="@style/wrap_wrap"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="@dimen/dimen_5_dip"
+				android:layout_toRightOf="@+id/top_bar_left_img_iv"
+				android:background="@null"
+				android:visibility="gone"
+				android:textColor="#ffffff"
+				android:textSize="17sp"
+				 />
+		</RelativeLayout>
+		<RelativeLayout
+			android:layout_alignParentRight="true"
+			android:id="@+id/top_bar_right_rl"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent">
+			<ImageView
+				android:id="@+id/top_bar_right_img_iv"
+				style="@style/wrap_wrap"
+				android:layout_centerVertical="true"
+				android:scaleType="centerCrop"
+				android:visibility="gone"
+				android:layout_alignParentRight="true"
+				 />
+
+			<TextView
+				android:id="@+id/top_bar_right_title_tv"
+				style="@style/wrap_wrap"
+				android:visibility="gone"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="@dimen/dimen_5_dip"
+				android:layout_toLeftOf="@+id/top_bar_right_img_iv"
+				android:background="@null"
+				android:textColor="#ffffff"
+				android:textSize="17sp"
+				 />
+		</RelativeLayout>
+		<TextView
+			android:id="@+id/top_bar_title_tv"
+			style="@style/wrap_wrap"
+			android:layout_centerInParent="true"
+			android:ellipsize="end"
+			android:singleLine="true"
+			android:textColor="#ffffff"
+			android:textSize="20sp" />
+	</RelativeLayout>
+
+</LinearLayout>
